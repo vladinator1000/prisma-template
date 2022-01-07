@@ -10,6 +10,8 @@ A minimal template that enables delightful database development.
 
 🧹 A nice local development experience with auto-reloading and linting, formatting, compiling on commit
 
+Made with ♥ by me ([@vladinator1000](https://github.com/vladinator1000/)) and my dad ([@savovsa](https://github.com/savovsa))
+
 ## Instructions for use
 
 1. Copy `.env.dev` and rename it to `.env`
