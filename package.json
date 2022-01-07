@@ -26,7 +26,7 @@
     "prisma",
     "typescript"
   ],
-  "author": "Vlady Veselinov",
+  "author": "Vlady Veselinov and Sasho Savov",
   "license": "MIT",
   "dependencies": {
     "dotenv": "10.0.0",

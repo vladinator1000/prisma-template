@@ -14,7 +14,7 @@ jobs:
 
     env:
       SKIP_DEV_SEED: true
-      DATABASE_URL: postgresql://postgres:test@localhost:5432/yupty
+      DATABASE_URL: postgresql://postgres:test@localhost:5432/db
 
     strategy:
       matrix:
@@ -45,7 +45,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: ⚡ Cache
-      - uses: actions/cache@v2
+        uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -65,7 +65,7 @@ jobs:
         run: npm run test
 
       - name: Set up database
-        run: npm prisma-reset
+        run: npm run prisma-reset
 
       - name: 🎰 Integration test
         run: npm run itest
