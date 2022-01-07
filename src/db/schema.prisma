@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model PrismaSeed {
+  id        String   @id
+  name      String
+  startedAt DateTime @default(now()) @db.Timestamptz(3)
+
+  @@map("_prisma_seeds")
+}
+
+model User {
+  id   Int    @id @default(autoincrement())
+  name String @db.VarChar(255)
+}
