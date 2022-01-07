@@ -13,7 +13,7 @@ A minimal template that enables delightful database development.
 ## Instructions for use
 
 1. Copy `.env.dev` and rename it to `.env`
-1. IN your terminal, start the database `docker-compose up`
+1. In your terminal, start the database `docker-compose up`
 1. In another terminal, `npm start`
 
 We'll use [Prisma](https://www.prisma.io/docs/) to talk to the database.
@@ -57,3 +57,9 @@ To visually interact with the database, run Prisma Studio
 ```sh
 npm run prisma-studio
 ```
+
+## Testing philosophy
+
+The tests are separated into unit and integration, because we can avoid running the integration tests if the unit tests fail.
+Integration tests should be able to run in any order and should not depend on existing data in the database.
+Every integration test should set up its own prerequisites and clean up after itself so that the next integration test can have a clean environment to run in.

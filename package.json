@@ -12,6 +12,7 @@
     "prisma-reset": "prisma migrate reset --force",
     "prisma-studio": "prisma studio",
     "prisma-seed": "prisma db seed",
+    "codegen": "prisma generate",
     "prisma-create-seed": "ts-node src/db/seeds/utils/createSeed/script.ts",
     "ts": "tsc --noEmit",
     "lint": "eslint .",
