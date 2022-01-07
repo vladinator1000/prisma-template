@@ -8,7 +8,7 @@ import {
 
 export type SeedEnvironment = 'development' | 'production'
 export function getSeedDirectory(environment: SeedEnvironment): string {
-  return path.join(process.cwd(), 'server/db/seeds', environment)
+  return path.join(process.cwd(), 'src/db/seeds', environment)
 }
 
 export async function applyProdSeeds() {

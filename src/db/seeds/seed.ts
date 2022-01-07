@@ -24,8 +24,8 @@ async function main() {
 
   // Skip this in CI for faster runs
   if (
-    process.env.NODE_ENV === 'development' &&
-    !Boolean(process.env.skipDevSeed)
+    process.env.NODE_ENV !== 'production' &&
+    !Boolean(process.env.SKIP_DEV_SEED)
   ) {
     const devSeedsDirectory = getSeedDirectory('development')
     const devSeeds = await parseSeedsWithHistory(prisma, devSeedsDirectory)
