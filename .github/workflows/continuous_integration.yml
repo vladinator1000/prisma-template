@@ -65,7 +65,7 @@ jobs:
         run: npm run test
 
       - name: Set up database
-        run: npm prisma-reset
+        run: npm run prisma-reset
 
       - name: 🎰 Integration test
         run: npm run itest
