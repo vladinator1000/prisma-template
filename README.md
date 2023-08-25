@@ -1,4 +1,4 @@
-# Prisma, Postgres, TypeScript starter
+# Prisma, Postgres and TypeScript starter template
 
 A template for delightful database development.
 
@@ -18,10 +18,11 @@ Made with ♥ by me ([@vladinator1000](https://github.com/vladinator1000/)) and 
 1. In your terminal, start the database `docker-compose up`
 1. In another terminal, `npm start`
 
-We'll use [Prisma](https://www.prisma.io/docs/) to talk to the database.
+Running these commands will reset the database, run migrations, seeds and generate the TypeScript Prisma client.
+
+We'll be using [Prisma](https://www.prisma.io/docs/) to talk to the database.
 If you'd like to understand how it works, please read the [Prisma concepts](https://www.prisma.io/docs/concepts).
 
-This will reset the database, run migrations, seeds and generate the TypeScript Prisma client.
 
 ### Migrations (structural changes)
 
