@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2021",
+    "target": "ESNext",
     "module": "CommonJS",
     "esModuleInterop": true,
     "lib": ["es2021"],

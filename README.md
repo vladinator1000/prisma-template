@@ -1,16 +1,16 @@
 # Prisma, Postgres, TypeScript starter
 
-A minimal template that enables delightful database development.
+A template for delightful database development.
 
 ## Features
 
-🌱 Seed your database with different test data differently depending on your environment (`development` or `production`)
+🌱 Programatically add data your database with different test data depending on your environment (`development` or `production`).
 
-🧪 Separate integration test command and mindset for deterministic database integration testing, along with an example github action for continuous integration
+🧪 Separate integration test command and mindset for deterministic testing, along with an example [github action](.github/workflows/continuous_integration.yml) for continuous integration.
 
-🧹 A nice local development experience with auto-reloading and linting, formatting, compiling on commit
+🧹 A nice local development experience with auto-reloading, linting, formatting and compilation on commit.
 
-Made with ♥ by me ([@vladinator1000](https://github.com/vladinator1000/)) and my dad ([@savovsa](https://github.com/savovsa))
+Made with ♥ by me ([@vladinator1000](https://github.com/vladinator1000/)) and my dad ([@savovsa](https://github.com/savovsa)). We were looking for an excuse to hang out and made this in the process.
 
 ## Instructions for use
 
@@ -64,12 +64,16 @@ npm run prisma-studio
 
 ## Testing philosophy
 
-The tests are separated into unit and integration, because we can avoid running the integration tests if the unit tests fail.
-
 To run the unit tests:
 `npm run test`
 
 To run the integration tests:
 `npm run itest`
 
+
+The tests are separated into unit and integration. By separating them, we can have shorter continuous integration runs by avoid running the integration tests if the unit tests fail.
+
 Integration tests should be able to run in any order and should not depend on existing data in the database. Every integration test should set up its own prerequisites and clean up after itself so that the next integration test can have a clean environment to run in.
+
+
+
