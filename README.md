@@ -4,7 +4,7 @@ A template for delightful database development.
 
 ## Features
 
-🌱 Programatically add data to your database, depending on your environment (e.g. `development` or `production`).
+🌱 Programatically add data to your database, with respect to the environment (e.g. `development` or `production`).
 
 🧪 Separate integration test command and mindset for deterministic testing, along with an example [github action](.github/workflows/continuous_integration.yml) for continuous integration.
 
